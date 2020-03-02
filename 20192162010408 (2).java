@@ -1,0 +1,41 @@
+ import java.util.Scanner;
+ 
+ class Main {
+
+	public static void main(String[] args) {
+	 Scanner sc = new Scanner(System.in);	
+
+	 	System.out.println("Informe o preco de etiqueta: ");
+	 	double eti = sc.nextDouble();
+	 	
+	 	System.out.println("Informe a forma de pagamento: ");
+	 	int form = sc.nextInt();
+	 	
+	 
+	 	
+	 	if( form == 1 ) {
+	 		System.out.println("1: A vista em dinheiro ou cheque, recebe 10% de desconto");
+	 		double vlf = eti - (10.0/100.0)*eti;
+	 		
+	 		System.out.println("Valor final: " + vlf);
+	 		
+	 	}else if(form == 2) {
+	 		System.out.println("2: A vista no cartao de credito, recebe 15% de desconto");
+	 		double vl2 = eti - (15.0/100.0)*eti;
+	 		System.out.println("Valor final: " + vl2);
+	 		
+	 	}else if(form == 3) {
+	 		System.out.println("3: Em duas vezes, preco normal de etiqueta sem juros");
+	 		System.out.println("Valor final: " + eti);
+	 	}else if(form == 4) {
+	 		System.out.println("4: Em duas vezes, preco normal de etiqueta mais juros de 10%");
+	 		double vf4 = eti + (10.0/100.0)* eti;
+	 		System.out.println("Valor final: " + vf4);
+	 	}else if( form > 4) {
+	 		System.out.println("Opcao invalida!");
+	 	}
+	 	
+	 	sc.close();
+	}
+
+}
